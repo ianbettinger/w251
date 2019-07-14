@@ -14,7 +14,7 @@
         </inertia>
         <pose frame=''>0 0 0.25 0 -0 0</pose>
       </inertial>
-      <pose frame=''>0.084444 -0.605838 0 0 -0 0</pose>
+      <pose frame=''>0.084444 -0.605838 -0 0 -0 0</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -101,18 +101,18 @@
     </link>
     <link name='link_0_0'>
       <inertial>
-        <mass>0.467931</mass>
+        <mass>0.0762942</mass>
         <inertia>
-          <ixx>0.222659</ixx>
+          <ixx>0.057475</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.063978</iyy>
+          <iyy>0.0105343</iyy>
           <iyz>0</iyz>
-          <izz>0.28478</izz>
+          <izz>0.0675006</izz>
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>0.54 0.25 0.875 0 -0 0</pose>
+      <pose frame=''>0.54 0.25 0.9 0 -0 0</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -121,7 +121,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>1.27157 3 0.154336</size>
+            <size>1.27157 3 0.2</size>
           </box>
         </geometry>
         <material>
@@ -147,7 +147,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>1.27157 3 0.154336</size>
+            <size>1.27157 3 0.2</size>
           </box>
         </geometry>
         <surface>
@@ -1908,6 +1908,19 @@
               <size>1 1 0.1</size>
             </box>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <visual name='arm_base_geom_visual'>
           <pose frame=''>0 0 0.05 0 -0 0</pose>
@@ -1931,6 +1944,19 @@
               <length>1</length>
             </cylinder>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <visual name='arm_base_geom_arm_trunk_visual'>
           <pose frame=''>0 0 0.6 0 -0 0</pose>
@@ -1948,6 +1974,9 @@
           </material>
         </visual>
         <pose frame=''>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <link name='simple_arm::arm_shoulder_pan'>
         <pose frame=''>0 0 1.1 0 -0 0</pose>
@@ -1971,6 +2000,19 @@
               <length>0.1</length>
             </cylinder>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <visual name='arm_shoulder_pan_geom_visual'>
           <pose frame=''>0 0 0.05 0 -0 0</pose>
@@ -1994,6 +2036,19 @@
               <size>1 0.05 0.1</size>
             </box>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <visual name='arm_shoulder_pan_geom_arm_shoulder_visual'>
           <pose frame=''>0.55 0 0.05 0 -0 0</pose>
@@ -2009,6 +2064,9 @@
             </script>
           </material>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <link name='simple_arm::arm_elbow_pan'>
         <pose frame=''>1.05 0 1.1 0 -0 0</pose>
@@ -2032,6 +2090,19 @@
               <length>0.2</length>
             </cylinder>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <visual name='arm_elbow_pan_geom_visual'>
           <pose frame=''>0 0 0.1 0 -0 0</pose>
@@ -2055,6 +2126,19 @@
               <size>0.5 0.03 0.1</size>
             </box>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <visual name='arm_elbow_pan_geom_arm_elbow_visual'>
           <pose frame=''>0.3 0 0.15 0 -0 0</pose>
@@ -2078,6 +2162,19 @@
               <length>0.3</length>
             </cylinder>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <visual name='arm_elbow_pan_geom_arm_wrist_visual'>
           <pose frame=''>0.55 0 0.15 0 -0 0</pose>
@@ -2094,6 +2191,9 @@
             </script>
           </material>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <link name='simple_arm::arm_wrist_lift'>
         <pose frame=''>1.6 0 1.05 0 -0 0</pose>
@@ -2117,6 +2217,19 @@
               <length>1</length>
             </cylinder>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <visual name='arm_wrist_lift_geom_visual'>
           <pose frame=''>0 0 0.5 0 -0 0</pose>
@@ -2133,6 +2246,9 @@
             </script>
           </material>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <link name='simple_arm::arm_wrist_roll'>
         <pose frame=''>1.6 0 1 0 -0 0</pose>
@@ -2156,6 +2272,19 @@
               <length>0.05</length>
             </cylinder>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <visual name='arm_wrist_roll_geom_visual'>
           <pose frame=''>0 0 0.025 0 -0 0</pose>
@@ -2172,6 +2301,9 @@
             </script>
           </material>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <joint name='simple_arm::arm_shoulder_pan_joint' type='revolute'>
         <parent>simple_arm::arm_base</parent>
@@ -2249,6 +2381,15 @@
         <pose frame=''>1.65 0 1.5 0 -0 0</pose>
         <inertial>
           <mass>10</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
         </inertial>
         <collision name='collision'>
           <geometry>
@@ -2262,7 +2403,15 @@
                 <max_vel>0</max_vel>
               </ode>
             </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
           <geometry>
@@ -2271,11 +2420,23 @@
             </box>
           </geometry>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <link name='simple_gripper::palm'>
         <pose frame=''>1.8 0 1.05 0 -0 0</pose>
         <inertial>
           <mass>0.5</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
         </inertial>
         <collision name='collision'>
           <geometry>
@@ -2289,7 +2450,15 @@
                 <max_vel>0</max_vel>
               </ode>
             </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
           <geometry>
@@ -2298,11 +2467,23 @@
             </box>
           </geometry>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <link name='simple_gripper::left_finger'>
         <pose frame=''>1.9 0.2 1.05 0 0 -0.78539</pose>
         <inertial>
           <mass>0.1</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
         </inertial>
         <collision name='collision'>
           <geometry>
@@ -2316,13 +2497,18 @@
                 <mu>0.1</mu>
                 <mu2>0</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
                 <max_vel>0</max_vel>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
           <geometry>
@@ -2331,11 +2517,23 @@
             </box>
           </geometry>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <link name='simple_gripper::left_finger_tip'>
         <pose frame=''>2.136 0.3 1.05 0 -0 1.5707</pose>
         <inertial>
           <mass>0.5</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
         </inertial>
         <collision name='collision'>
           <geometry>
@@ -2349,13 +2547,18 @@
                 <mu>0.1</mu>
                 <mu2>0</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
                 <max_vel>0</max_vel>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
           <geometry>
@@ -2364,11 +2567,23 @@
             </box>
           </geometry>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <link name='simple_gripper::right_finger'>
         <pose frame=''>1.9 -0.2 1.05 0 -0 0.78539</pose>
         <inertial>
           <mass>0.1</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
         </inertial>
         <collision name='collision'>
           <geometry>
@@ -2382,13 +2597,18 @@
                 <mu>0.1</mu>
                 <mu2>0</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
                 <max_vel>0</max_vel>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
           <geometry>
@@ -2397,11 +2617,23 @@
             </box>
           </geometry>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <link name='simple_gripper::right_finger_tip'>
         <pose frame=''>2.136 -0.3 1.05 0 -0 1.5707</pose>
         <inertial>
           <mass>0.1</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
         </inertial>
         <collision name='collision'>
           <geometry>
@@ -2415,13 +2647,18 @@
                 <mu>0.1</mu>
                 <mu2>0</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
                 <max_vel>0</max_vel>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
           <geometry>
@@ -2430,6 +2667,9 @@
             </box>
           </geometry>
         </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
       </link>
       <joint name='simple_gripper::palm_left_finger' type='revolute'>
         <pose frame=''>0 -0.15 0 0 -0 0</pose>
@@ -2442,6 +2682,10 @@
           </limit>
           <xyz>0 0 1</xyz>
           <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
         </axis>
       </joint>
       <joint name='simple_gripper::left_finger_tip' type='revolute'>
@@ -2455,6 +2699,10 @@
           </limit>
           <xyz>0 0 1</xyz>
           <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
         </axis>
       </joint>
       <joint name='simple_gripper::palm_right_finger' type='revolute'>
@@ -2468,6 +2716,10 @@
           </limit>
           <xyz>0 0 1</xyz>
           <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
         </axis>
       </joint>
       <joint name='simple_gripper::right_finger_tip' type='revolute'>
@@ -2481,6 +2733,10 @@
           </limit>
           <xyz>0 0 1</xyz>
           <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
         </axis>
       </joint>
       <joint name='simple_gripper::palm_riser' type='prismatic'>
@@ -2493,6 +2749,10 @@
           </limit>
           <xyz>0 0 1</xyz>
           <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
         </axis>
       </joint>
       <gripper name='simple_gripper'>
@@ -2518,13 +2778,17 @@
           </limit>
           <xyz>0 0 1</xyz>
           <use_parent_model_frame>1</use_parent_model_frame>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
         </axis>
       </joint>
-      <pose frame=''>0.404215 0.25 0.804832 0 -0 0</pose>
+      <pose frame=''>0.404215 0.25 1.022 0 -0 0</pose>
     </model>
-    <joint name='link_0_0_JOINT_0' type='fixed'>
-      <parent>link_0_0</parent>
-      <child>link_0_clone_clone_clone_clone_clone</child>
+    <joint name='arm_base_JOINT_0' type='fixed'>
+      <parent>simple_arm_gripper::simple_arm::arm_base</parent>
+      <child>link_0_0</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
       <physics>
         <ode>
@@ -2541,8 +2805,8 @@
     </joint>
     <joint name='link_0_0_JOINT_1' type='fixed'>
       <parent>link_0_0</parent>
-      <child>link_0_clone_clone</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <child>link_0</child>
+      <pose frame=''>0.4 -0.4 0.8 0 -0 0</pose>
       <physics>
         <ode>
           <limit>
@@ -2558,59 +2822,8 @@
     </joint>
     <joint name='link_0_0_JOINT_2' type='fixed'>
       <parent>link_0_0</parent>
-      <child>link_0</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
-      <physics>
-        <ode>
-          <limit>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </limit>
-          <suspension>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </suspension>
-        </ode>
-      </physics>
-    </joint>
-    <joint name='link_0_0_JOINT_3' type='fixed'>
-      <parent>link_0_0</parent>
       <child>link_0_clone_clone_clone</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
-      <physics>
-        <ode>
-          <limit>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </limit>
-          <suspension>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </suspension>
-        </ode>
-      </physics>
-    </joint>
-    <joint name='link_0_0_JOINT_4' type='fixed'>
-      <parent>link_0_0</parent>
-      <child>link_0_clone</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
-      <physics>
-        <ode>
-          <limit>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </limit>
-          <suspension>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </suspension>
-        </ode>
-      </physics>
-    </joint>
-    <joint name='link_0_0_JOINT_5' type='fixed'>
-      <parent>link_0_0</parent>
-      <child>link_0_clone_clone_clone_clone</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose frame=''>-0.1 -0.1 0.9 0 -0 0</pose>
       <physics>
         <ode>
           <limit>
@@ -3007,23 +3220,6 @@
           <friction>0</friction>
         </dynamics>
       </axis>
-      <physics>
-        <ode>
-          <limit>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </limit>
-          <suspension>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </suspension>
-        </ode>
-      </physics>
-    </joint>
-    <joint name='arm_base_JOINT_0' type='fixed'>
-      <parent>simple_arm_gripper::simple_arm::arm_base</parent>
-      <child>link_0_0</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
       <physics>
         <ode>
           <limit>
